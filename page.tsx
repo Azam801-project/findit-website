@@ -1,0 +1,1 @@
+import ReportForm from "./report-form";export default function Report(){return <div className="content narrow"><div className="pageIntro"><span className="eyebrow">ADD TO THE COMMUNITY</span><h2>Report an item</h2><p>Share a few details. The more accurate your report, the easier it is to find a match.</p></div><ReportForm/></div>}

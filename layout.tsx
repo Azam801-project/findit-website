@@ -1,0 +1,8 @@
+import "./globals.css";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Search, LayoutDashboard, PlusCircle, PackageSearch } from "lucide-react";
+export const metadata: Metadata = { title: "FindIt — Lost & Found", description: "A smarter way to reunite people with their belongings." };
+export default function RootLayout({children}:{children:React.ReactNode}) {
+ return <html lang="en"><body><div className="shell"><aside className="sidebar"><Link href="/" className="brand"><span className="brandIcon">F</span><span>FindIt<span className="brandDot">.</span><small>LOST & FOUND</small></span></Link><div className="navLabel">WORKSPACE</div><nav><Link href="/"><LayoutDashboard size={18}/> Overview</Link><Link href="/items"><PackageSearch size={18}/> Browse items</Link><Link href="/report"><PlusCircle size={18}/> Report an item</Link><Link href="/matches"><Search size={18}/> Smart matches</Link></nav><div className="sideBottom"><div className="helpCard"><div className="helpIcon">✦</div><b>Every item has a way home.</b><p>Help your community reconnect with what matters.</p><Link href="/report">Create a report →</Link></div><div className="profile"><div className="avatar">FI</div><div><b>FindIt Community</b><small>Public workspace</small></div></div></div></aside><main className="main"><header className="topbar"><div><span className="eyebrow">COMMUNITY RECOVERY PLATFORM</span><h1>FindIt <span className="brandDot">.</span></h1></div><Link className="primary small" href="/report"><PlusCircle size={16}/> New report</Link></header>{children}<footer>FindIt AI · Built to bring lost things home.</footer></main></div></body></html>
+}
